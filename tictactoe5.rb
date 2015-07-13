@@ -41,7 +41,7 @@ def winner_check(b)
   win_computer = b.select { |k, val| val == "0"}.keys
   win_trio.each do |trio|
     return "Player" if b.values_at(*trio).count('X') == 3
-    return "Computer" if b.values_at(*trio).count('O') == 3
+    return "Computer" if b.values_at(*trio).count('0') == 3
   end
   nil
 end
